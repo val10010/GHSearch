@@ -6,8 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "cross-env NODE_ENV=dev  nodemon app.js",
-    "dev-serve": "cross-env NODE_ENV=dev node app.js",
-    "start": "npm run watch --prefix client",
+    "start": "cross-env NODE_ENV=dev node app.js",
     "dev": "concurrently \"npm run serve\" \"npm run start\"",
     "prod": "npm run prod --prefix client"
   },
