@@ -3,12 +3,12 @@ const router = Router();
 const fs = require('fs');
 const env = process.env.NODE_ENV;
 
-router.post('/main', async (req, res) => {
+router.post('/', async (req, res) => {
 
 
 });
 
-router.get('/main', async (req, res) => {
+router.get('/', async (req, res) => {
     try {
         res.send('I be ready!');
     } catch (e) {
