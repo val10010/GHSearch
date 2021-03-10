@@ -14,7 +14,6 @@ async function postSearchService(value) {
     try {
         const  {data}  = await innerInstance({
             method: 'POST',
-            url: '/',
             data: JSON.stringify({
                 value
             }),
