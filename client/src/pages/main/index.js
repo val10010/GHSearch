@@ -5,6 +5,7 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Link from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography';
+import Pagination from '@material-ui/lab/Pagination';
 import Search from 'Components/search';
 import useDebounce from 'Hooks/useDebounce';
 import { mainAction } from  'Actions/main';
@@ -19,7 +20,8 @@ const Main = () => {
     const dispatch = useDispatch();
     const {
         getRepositoriesData,
-        items
+        items,
+        totalCount
     } = useMain();
     const classes = useStyles();
     const [searchTerm, setSearchTerm] = useState('');
@@ -34,8 +36,7 @@ const Main = () => {
                 getRepositoriesData(debouncedSearchTerm, page);
             }
         },
-
-        [debouncedSearchTerm]
+        [debouncedSearchTerm, page]
     );
 
     const onRequestSearch = (value) => {
@@ -49,7 +50,7 @@ const Main = () => {
                     cancelOnEscape={true}
                     onRequestSearch={onRequestSearch}
                     onChange={setSearchTerm}
-                    onCancelSearch={() => dispatch(mainAction.updateItems([]))}
+                    onCancelSearch={() => dispatch(mainAction.setItems([]))}
                 />
             </Grid>
             {
@@ -73,6 +74,18 @@ const Main = () => {
                         </Card>
                     </Grid>
                 ))
+            }
+
+            {(items.length > 0) &&
+                <Pagination
+                    className={classes.pagination}
+                    type="page"
+                    count={totalCount}
+                    color="secondary"
+                    onChange={(e, page) => {
+                        setPage(page);
+                    }}
+                />
             }
 
         </Grid>

@@ -1,5 +1,5 @@
 import axios from 'axios';
-const API_URL =  'https://api-gh-search.herokuapp.com';
+const API_URL = process.env.NODE_ENV === 'development' ? 'http://127.0.0.1:9000' : 'https://api-gh-search.herokuapp.com/';
 
 // Default instance
 const instance = axios.create({

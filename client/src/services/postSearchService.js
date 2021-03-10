@@ -2,7 +2,7 @@ import { innerInstance } from "API/api";
 import axios from 'axios';
 
 let cancelToken;
-async function postSearchService(value) {
+async function postSearchService(value, page) {
     if(value.trim().length === 0) return {success: false};
 
     if (typeof cancelToken != typeof undefined) {
@@ -15,7 +15,8 @@ async function postSearchService(value) {
         const  {data}  = await innerInstance({
             method: 'POST',
             data: JSON.stringify({
-                value
+                value,
+                page
             }),
             cancelToken: cancelToken.token
         });
