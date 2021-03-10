@@ -1,0 +1,10 @@
+/node_modules
+.env
+.env.backup
+npm-debug.log
+yarn-error.log
+/.idea
+/..idea
+package-lock.json
+.idea
+.DS_Store
