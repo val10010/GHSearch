@@ -9,17 +9,13 @@ import Main from './pages/main';
 import './App.scss';
 
 
-
-
-
-
 const App =  () => {
     return (
         <div className="container">
             <Provider store={ store }>
                 <Router history={ useHistory }>
                     <Switch>
-                        <Route exact path='/' component={Main} />
+                        <Route  path='/' component={Main} />
                     </Switch>
                 </Router>
             </Provider>

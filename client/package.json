@@ -45,7 +45,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "webpack-dev-server  --mode development --open --hot",
-    "prod": "webpack  --env.NODE_ENV=prod --progress",
+    "prod": "webpack  --env.NODE_ENV=prod  --progress",
     "deploy": "gh-pages -d public"
   },
   "repository": {
