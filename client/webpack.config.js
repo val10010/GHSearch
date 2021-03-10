@@ -23,6 +23,8 @@ module.exports = {
                 Reducers: path.resolve(__dirname, 'src/redux/reducers'),
                 Services: path.resolve(__dirname, 'src/services'),
                 Utils: path.resolve(__dirname, 'src/utils'),
+                Hooks: path.resolve(__dirname, 'src/hooks'),
+                API: path.resolve(__dirname, 'src/api'),
             },
         },
         optimization: {
