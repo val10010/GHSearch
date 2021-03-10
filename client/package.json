@@ -1,4 +1,5 @@
 {
+  "homepage": "https://val10010.github.io/GHSearch/",
   "name": "ghsearch",
   "version": "1.0.0",
   "description": "",
@@ -27,6 +28,7 @@
     "copy-webpack-plugin": "^5.1.1",
     "css-loader": "^3.4.2",
     "file-loader": "^5.0.2",
+    "gh-pages": "^3.1.0",
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.13.0",
@@ -43,7 +45,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "webpack-dev-server  --mode development --open --hot",
-    "prod": "webpack  --env.NODE_ENV=prod --progress"
+    "prod": "webpack  --env.NODE_ENV=prod --progress",
+    "deploy": "gh-pages -d public"
   },
   "repository": {
     "type": "git",
