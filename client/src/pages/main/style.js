@@ -28,6 +28,12 @@ const useStyles = makeStyles((theme) => ({
             padding: '10px 10px',
             textDecoration: 'none',
             cursor: 'pointer'
+        },
+        pagination: {
+            margin: '20px auto 20px',
+            '& *': {
+                color: '#fff'
+            }
         }
     }
 ));

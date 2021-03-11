@@ -1,3 +1,5 @@
 export const types = Object.freeze({
-    UPDATE_ITEMS: 'UPDATE_ITEMS'
+    SET_ITEMS: 'SET_ITEMS',
+    SET_TOTAL_COUNT: 'SET_TOTAL_COUNT',
+    UPDATE_CACHE: 'UPDATE_CACHE'
 });
