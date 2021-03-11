@@ -13,4 +13,10 @@ export const mainAction = Object.freeze({
             payload,
         }
     },
+    updateCache: (payload) => {
+        return {
+            type: types.UPDATE_CACHE,
+            payload,
+        }
+    }
 });
